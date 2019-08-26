@@ -485,7 +485,16 @@ body {
     -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
     border-radius: 0.5rem;
-    position: relative; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .projects__content {
     padding: 2rem 2rem 0 2rem; }
   .projects__sub-title {
@@ -495,13 +504,10 @@ body {
     max-width: 550px;
     text-align: left;
     line-height: 1.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-size: 18px;
     font-weight: 200; }
   .projects__footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
