@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -15,6 +16,7 @@ body {
   background: #fff;
   font-family: 'Poppins', sans-serif;
   border: 16px solid #171F3F;
+  color: #171F3F;
 }
 
 .main {
@@ -23,9 +25,9 @@ body {
 
 .hero {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1300px;
   margin: 0 auto 10rem auto;
-  padding: 7rem 5rem 0 1rem;
+  padding: 7rem 5rem 0 2rem;
 
   &__image {
     width: 120px;
@@ -37,53 +39,82 @@ body {
 
   &__title {
     width: 100%;
-    max-width: 780px;
+    max-width: 710px;
     letter-spacing: 0.1rem;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 2.5rem;
+    line-height: 3rem;
     text-align: left;
   }
 
   &__description {
     width: 100%;
-    max-width: 600px;
+    max-width: 610px;
     margin-bottom: 4rem;
-    line-height: 1.5rem;
-    font-size: 18px;
+    line-height: 2rem;
+    font-size: 20px;
     font-weight: 200;
     text-align: left;
   }
 
   &__link {
     color: #0593FB;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
+    text-decoration: none;
   }
 }
 
 .skills {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1300px;
   margin: 0 auto 10rem auto;
-  padding: 0 5rem 0 1rem;
+  padding: 0 1rem 0 2rem;
 
   &__title {
+    font-size: 36px;
     padding-bottom: 1rem;    border-bottom: 2px solid #CBD2D9;
   }
 
   .skills-group {
-    margin-top: 7rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 
     &__title {
-      width: 250px;
-      margin-right: 13rem;
+      font-size: 32px;
+      width: 450px;
+      margin: 0;
+      margin-right: 10rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1.3rem;
+        left: 0;
+        width: 3rem;
+        height: 0.2rem;
+        border-radius: 0.5rem;
+      }
+
+      &--knowledge::before {
+        background-color: #06C847;
+      }
+
+      &--something::before {
+        background-color: #653CAD
+      }
+
+      &--learn::before {
+        background-color: #2251CC;
+      }
     }
 
     &__list {
+      margin: 0;
       list-style: none;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -92,8 +123,9 @@ body {
     }
 
     &__item {
-      width: 200px;
+      width: 225px;
       font-weight: 300;
+      font-size: 18px;
       position: relative;
 
       &--knowledge::before {
@@ -147,17 +179,22 @@ body {
 
   &__box {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
+  }
+
+  &__title {
+    font-size: 36px;
   }
 
   &__paragraph {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
+    font-size: 20px;
     text-align: left;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 
 
@@ -178,7 +215,7 @@ body {
   }
 
   &__content {
-    padding: 1rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
 
   &__description {
@@ -201,7 +238,43 @@ body {
   }
 
   &__link {
-    margin-left: 1rem;
+    text-decoration: none;
+    margin-left: 3rem;
+    color: #0593FB;
+    position: relative;
+
+    &--demo {
+      border-right: 1px solid #CBD2D9;
+      padding-right: 1.5rem;
+    }
+
+    &--demo::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.5rem;
+      width: 18px;
+      height: 18px;
+      background: url('../assets/img/computer-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    &--github::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.5rem;
+      width: 18px;
+      height: 18px;
+      background: url('../assets/img/terminal-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
   }
 }
 
@@ -212,9 +285,25 @@ body {
 
   &__box {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 7rem 1rem;
+    padding: 7rem 2rem;
+  }
+
+  &__title {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1.5rem;
+      left: 0;
+      width: 3rem;
+      height: 0.2rem;
+      border-radius: 0.5rem;
+      background-color: #0593FB;
+    }
   }
 
   &__paragraph {
@@ -238,5 +327,6 @@ body {
 
   &__email {
     color: #0593FB;
+    text-decoration: none;
   }
 }
