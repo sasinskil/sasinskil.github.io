@@ -470,6 +470,7 @@ body {
     line-height: 2rem;
     margin-bottom: 5rem; }
   .projects__list {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -483,7 +484,8 @@ body {
     background: #fff;
     -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
             box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
-    border-radius: 0.5rem; }
+    border-radius: 0.5rem;
+    position: relative; }
   .projects__content {
     padding: 2rem 2rem 0 2rem; }
   .projects__sub-title {
@@ -493,10 +495,13 @@ body {
     max-width: 550px;
     text-align: left;
     line-height: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     font-size: 18px;
     font-weight: 200; }
   .projects__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
