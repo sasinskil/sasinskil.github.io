@@ -218,12 +218,17 @@ body {
     padding: 2rem 2rem 0 2rem;
   }
 
+  &__sub-title {
+    font-size: 20px;
+  }
+
   &__description {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     text-align: left;
     line-height: 1.5rem;
     margin-bottom: 2rem;
+    font-size: 18px;
     font-weight: 200;
   }
 
@@ -242,6 +247,7 @@ body {
     margin-left: 3rem;
     color: #0593FB;
     position: relative;
+    font-size: 18px;
 
     &--demo {
       border-right: 1px solid #CBD2D9;
@@ -306,10 +312,15 @@ body {
     }
   }
 
+  &__title {
+    font-size: 32px;
+  }
+
   &__paragraph {
     width: 100%;
-    max-width: 450px;
+    max-width: 570px;
     font-weight: 200;
+    font-size: 20px;
     text-align: left;
     line-height: 2rem;
   }
@@ -328,5 +339,6 @@ body {
   &__email {
     color: #0593FB;
     text-decoration: none;
+    font-size: 20px;
   }
 }
