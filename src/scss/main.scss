@@ -117,12 +117,29 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 
+    &:hover > .skills-group__title::before {
+      width: 5rem;
+    }
+
+    &:hover > .skills-group__title--knowledge {
+      color:#06c847;
+    }
+
+    &:hover > .skills-group__title--something {
+      color:#653cad;
+    }
+
+    &:hover > .skills-group__title--learn {
+      color:#2251cc;
+    }
+
     &__title {
       font-size: 32px;
       width: 450px;
       margin: 0;
       margin-right: 10rem;
       position: relative;
+      transition: color 0.5s ease-in-out;
 
       &::before {
         content: "";
@@ -133,6 +150,7 @@ body {
         width: 3rem;
         height: 0.2rem;
         border-radius: 0.5rem;
+        transition: width 0.5s ease-in-out; 
       }
 
       &--knowledge::before {
