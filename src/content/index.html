@@ -27,94 +27,109 @@
 </head>
 
 <body>
-  <main>
-    <header>
-      <img src="" alt="">
-      <h1>Hey there! 👋 My name is Łukasz and I’m an aspiring Frontend developer and dogs lover, but mostly Labradors.
+  <main class="main">
+    <header class="hero">
+      <img src="" alt="" class="hero__image">
+      <h1 class="hero__title">Hey there! 👋 My name is Łukasz and I’m an aspiring Frontend developer and dogs lover, but
+        mostly Labradors.
       </h1>
-      <p>You might be interested in checking the list of my skills. Don’t forget to have a glimpse at my projects.
-        Currently I’m looking for a new challenges so if you have one - contact me 😊</p>
-      <a href="mailto:sasinskil@gmail.com">sasinskil@gmail.com</a>
+      <p class="hero__description">You might be interested in checking the list of <a class="hero__link" href="">my skills</a>. Don’t forget to have a
+        glimpse at <a class="hero__link" href="">my projects</a>.
+        Currently I’m looking for a new challenges so if you have one - <a class="hero__link" href="">contact me</a> 😊</p>
+      <a class="hero__email hero__link" href="mailto:sasinskil@gmail.com">sasinskil@gmail.com</a>
     </header>
-    <section>
-      <h2>My skills</h2>
-      <section>
-        <h3>Working knowledge</h3>
-        <ul>
-          <li>Semantic HTML5</li>
-          <li>Flexbox</li>
-          <li>CSS grid</li>
-          <li>Markdown</li>
-          <li>Forms</li>
-          <li>JS: DOM manipulations</li>
-          <li>JS: Local storage</li>
-          <li>SASS</li>
-          <li>Figma</li>
+    <section class="skills">
+      <h2 class="skills__title">My skills</h2>
+      <section class="skills-group">
+        <h3 class="skills-group__title skills-group__title--knowledge">Working knowledge</h3>
+        <ul class="skills-group__list">
+          <li class="skills-group__item skills-group__item--knowledge">Semantic HTML5</li>
+          <li class="skills-group__item skills-group__item--knowledge">Flexbox</li>
+          <li class="skills-group__item skills-group__item--knowledge">CSS grid</li>
+          <li class="skills-group__item skills-group__item--knowledge">Markdown</li>
+          <li class="skills-group__item skills-group__item--knowledge">Forms</li>
+          <li class="skills-group__item skills-group__item--knowledge">JS: DOM manipulations</li>
+          <li class="skills-group__item skills-group__item--knowledge">JS: Local storage</li>
+          <li class="skills-group__item skills-group__item--knowledge">SASS</li>
+          <li class="skills-group__item skills-group__item--knowledge">Figma</li>
         </ul>
       </section>
-      <section>
-        <h3>Know something about</h3>
-        <ul>
-            <li>JavaScript ES6 + features</li>
-            <li>Progressive web apps</li>
-            <li>CSS animations</li>
-            <li>Git</li>
-            <li>Working with API - REST</li>
-            <li>Accessibility</li>
-            <li>NPM Scripts</li>
+      <section class="skills-group">
+        <h3 class="skills-group__title skills-group__title--something">Know something about</h3>
+        <ul class="skills-group__list">
+          <li class="skills-group__item skills-group__item--something">JavaScript ES6 + features</li>
+          <li class="skills-group__item skills-group__item--something">Progressive web apps</li>
+          <li class="skills-group__item skills-group__item--something">CSS animations</li>
+          <li class="skills-group__item skills-group__item--something">Git</li>
+          <li class="skills-group__item skills-group__item--something">Working with API - REST</li>
+          <li class="skills-group__item skills-group__item--something">Accessibility</li>
+          <li class="skills-group__item skills-group__item--something">NPM Scripts</li>
         </ul>
       </section>
-      <section>
-        <h3>Want to learn</h3>
-        <ul>
-          <li>Vue JS</li>
-          <li>Vuex</li>
-          <li>Typescript</li>
-          <li>Node JS</li>
-          <li>React JS</li>
-          <li>Gatsby</li>
-          <li>GraphQL</li>
+      <section class="skills-group">
+        <h3 class="skills-group__title skills-group__title--learn">Want to learn</h3>
+        <ul class="skills-group__list">
+          <li class="skills-group__item skills-group__item--learn">Vue JS</li>
+          <li class="skills-group__item skills-group__item--learn">Vuex</li>
+          <li class="skills-group__item skills-group__item--learn">Typescript</li>
+          <li class="skills-group__item skills-group__item--learn">Node JS</li>
+          <li class="skills-group__item skills-group__item--learn">React JS</li>
+          <li class="skills-group__item skills-group__item--learn">Gatsby</li>
+          <li class="skills-group__item skills-group__item--learn">GraphQL</li>
         </ul>
       </section>
     </section>
-    <section>
-      <h2>Recent projects</h2>
-      <p>I started my frontend developer path in 2018. Since then, I’ve built some projects. Here’s the list of the
-        things I’ve done so far.</p>
-      <ul>
-        <li>
-          <div>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
+    <section class="projects">
+      <h2 class="projects__title">Recent projects</h2>
+      <p class="projects__description">I started my frontend developer path in 2018. Since then, I’ve built some
+        projects. Here’s the list of the
+        things I’ve done sotfar.</p>
+      <ul class="projects__list">
+        <li class="projects__item">
+          <div class="projects__content">
+            <img class="projects__github-logo" src="" alt="">
+            <h4 class="projects__sub-title"></h4>
+            <p class="projects__description"></p>
           </div>
-          <footer>
-            <a href=""></a>
-            <a href=""></a>
+          <footer class="projects__footer">
+            <a class="projects__link projects__link--demo" href=""></a>
+            <a class="projects__link projects__link--github" href=""></a>
           </footer>
         </li>
-        <li>
-          <div>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
+        <li class="projects__item">
+          <div class="projects__content">
+            <img class="projects__github-logo" src="" alt="">
+            <h4 class="projects__sub-title"></h4>
+            <p class="projects__description"></p>
           </div>
-          <footer>
-            <a href=""></a>
-            <a href=""></a>
+          <footer class="projects__footer">
+            <a class="projects__link projects__link--demo" href=""></a>
+            <a class="projects__link projects__link--github" href=""></a>
           </footer>
         </li>
       </ul>
     </section>
-    <footer>
-      <h3>Contact me</h3>
-      <p>I’m open for new opportunities. If you have one for me we should talk!</p>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+    <footer class="contact">
+      <h3 class="contact__title">Contact me</h3>
+      <p class="contact__paragraph">I’m open for new opportunities. If you have one for me we should talk!</p>
+      <ul class="contact__list">
+        <li class="contact__item">
+          <a class="contact__link" href="">
+            <img class="contact__image" src="" alt="">
+          </a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link" href="">
+            <img class="contact__image" src="" alt="">
+          </a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__link" href="">
+            <img class="contact__image" src="" alt="">
+          </a>
+        </li>
       </ul>
-      <a href="mailto:sasinskil@gmail.com">sasinskil@gmail.com</a>
+      <a class="contact__email" href="mailto:sasinskil@gmail.com">sasinskil@gmail.com</a>
     </footer>
   </main>
 
