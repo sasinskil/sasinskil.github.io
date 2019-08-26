@@ -314,15 +314,17 @@ html {
   font-size: 16px;
   scroll-behavior: smooth; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 body {
   background: #fff;
-  font-family: 'Poppins', sans-serif;
-  border: 16px solid #171F3F;
-  color: #171F3F; }
+  font-family: "Poppins", sans-serif;
+  border: 16px solid #171f3f;
+  color: #171f3f; }
 
 .main {
   width: 100%; }
@@ -335,7 +337,7 @@ body {
   .hero__image {
     width: 130px;
     height: 130px;
-    border: 4px solid #CBD2D9;
+    border: 4px solid #cbd2d9;
     border-radius: 50%;
     padding: 0.2rem; }
   .hero__title {
@@ -355,10 +357,36 @@ body {
     font-weight: 200;
     text-align: left; }
   .hero__link {
-    color: #0593FB;
+    color: #0593fb;
     font-size: 20px;
     font-weight: 300;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative; }
+    .hero__link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -0.01rem;
+      left: 0;
+      width: 0%;
+      height: 0.03rem;
+      background-color: #0593fb;
+      -webkit-transition: width 0.6s ease-in-out;
+      -o-transition: width 0.6s ease-in-out;
+      transition: width 0.6s ease-in-out; }
+    .hero__link:hover::after {
+      width: 100%; }
+  .hero__email::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0%;
+    height: 0.14rem;
+    background-color: #0593fb; }
+  .hero:hover::after {
+    width: 100%; }
 
 .skills {
   width: 100%;
@@ -368,7 +396,7 @@ body {
   .skills__title {
     font-size: 36px;
     padding-bottom: 1rem;
-    border-bottom: 2px solid #CBD2D9; }
+    border-bottom: 2px solid #cbd2d9; }
   .skills .skills-group {
     margin-top: 10rem;
     display: -webkit-box;
@@ -380,12 +408,23 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    .skills .skills-group:hover > .skills-group__title::before {
+      width: 5rem; }
+    .skills .skills-group:hover > .skills-group__title--knowledge {
+      color: #06c847; }
+    .skills .skills-group:hover > .skills-group__title--something {
+      color: #653cad; }
+    .skills .skills-group:hover > .skills-group__title--learn {
+      color: #2251cc; }
     .skills .skills-group__title {
       font-size: 32px;
       width: 450px;
       margin: 0;
       margin-right: 10rem;
-      position: relative; }
+      position: relative;
+      -webkit-transition: color 0.5s ease-in-out;
+      -o-transition: color 0.5s ease-in-out;
+      transition: color 0.5s ease-in-out; }
       .skills .skills-group__title::before {
         content: "";
         display: block;
@@ -394,13 +433,16 @@ body {
         left: 0;
         width: 3rem;
         height: 0.2rem;
-        border-radius: 0.5rem; }
+        border-radius: 0.5rem;
+        -webkit-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out; }
       .skills .skills-group__title--knowledge::before {
-        background-color: #06C847; }
+        background-color: #06c847; }
       .skills .skills-group__title--something::before {
-        background-color: #653CAD; }
+        background-color: #653cad; }
       .skills .skills-group__title--learn::before {
-        background-color: #2251CC; }
+        background-color: #2251cc; }
     .skills .skills-group__list {
       margin: 0;
       list-style: none;
@@ -454,7 +496,7 @@ body {
 
 .projects {
   width: 100%;
-  background: #F5F7FA; }
+  background: #f5f7fa; }
   .projects__box {
     width: 100%;
     max-width: 1300px;
@@ -517,31 +559,51 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #F5F7FA;
+    background: #f5f7fa;
     padding: 1rem 2rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem; }
   .projects__link {
     text-decoration: none;
     margin-left: 3rem;
-    color: #0593FB;
+    color: #0593fb;
     position: relative;
     font-size: 18px; }
-    .projects__link--demo {
-      border-right: 1px solid #CBD2D9;
-      padding-right: 1.5rem; }
-    .projects__link--demo::before {
+    .projects__link:hover::after {
+      opacity: 1; }
+    .projects__link::after {
       content: "";
-      display: inline-block;
+      display: block;
       position: absolute;
-      top: 0;
-      left: -1.5rem;
-      width: 18px;
-      height: 18px;
-      background: url("../assets/img/computer-icon.png");
+      top: -0.6rem;
+      left: -2rem;
+      height: 2.5rem;
+      width: 6.5rem;
+      opacity: 0;
+      background: #f5f7fa;
+      background-image: url("../assets/img/moving_forward-arrow.png");
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: center center; }
+      background-position: center center;
+      -webkit-transition: opacity 0.6s ease-in-out;
+      -o-transition: opacity 0.6s ease-in-out;
+      transition: opacity 0.6s ease-in-out; }
+    .projects__link--demo {
+      border-right: 1px solid #cbd2d9;
+      padding-right: 1.5rem;
+      position: relative; }
+      .projects__link--demo::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        width: 18px;
+        height: 18px;
+        background: url("../assets/img/computer-icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center; }
     .projects__link--github::before {
       content: "";
       display: inline-block;
@@ -557,7 +619,7 @@ body {
 
 .contact {
   width: 100%;
-  background: #171F3F;
+  background: #171f3f;
   color: #fff; }
   .contact__box {
     width: 100%;
@@ -575,7 +637,7 @@ body {
       width: 3rem;
       height: 0.2rem;
       border-radius: 0.5rem;
-      background-color: #0593FB; }
+      background-color: #0593fb; }
   .contact__title {
     font-size: 32px; }
   .contact__paragraph {
@@ -595,8 +657,23 @@ body {
   .contact__item + .contact__item {
     margin-left: 1rem; }
   .contact__email {
-    color: #0593FB;
+    color: #0593fb;
     text-decoration: none;
-    font-size: 20px; }
+    font-size: 20px;
+    position: relative; }
+    .contact__email:hover::after {
+      width: 100%; }
+    .contact__email::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 0%;
+      height: 0.14rem;
+      background-color: #0593fb;
+      -webkit-transition: width 0.6s ease-in-out;
+      -o-transition: width 0.6s ease-in-out;
+      transition: width 0.6s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */
