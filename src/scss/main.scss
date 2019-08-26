@@ -1,9 +1,10 @@
 @import "_normalize";
 @import "_variables";
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,600&display=swap');
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -11,6 +12,48 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  border: 16px solid #171F3F;
+}
+
+.main {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto 10rem auto;
+  padding: 7rem 5rem 0 1rem;
+
+  &__image {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #CBD2D9;
+    border-radius: 50%;
+    padding: 0.3rem;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 880px;
+    letter-spacing: 0.1rem;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 2.5rem;
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 4rem;
+    line-height: 1.5rem;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__link {
+    color: #0593FB;
+  }
 }
