@@ -305,23 +305,45 @@ body {
     position: relative;
     font-size: 18px;
 
-    &--demo {
-      border-right: 1px solid #cbd2d9;
-      padding-right: 1.5rem;
+    &:hover::after {
+      opacity: 1;
     }
 
-    &--demo::before {
+    &::after {
       content: "";
-      display: inline-block;
+      display: block;
       position: absolute;
-      top: 0;
-      left: -1.5rem;
-      width: 18px;
-      height: 18px;
-      background: url("../assets/img/computer-icon.png");
+      top: -0.6rem;
+      left: -2rem;
+      height: 2.5rem;
+      width: 6.5rem;
+      opacity: 0;
+      background: #f5f7fa;
+      background-image: url('../assets/img/moving_forward-arrow.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    &--demo {
+      border-right: 1px solid #cbd2d9;
+      padding-right: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        width: 18px;
+        height: 18px;
+        background: url("../assets/img/computer-icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
     }
 
     &--github::before {
