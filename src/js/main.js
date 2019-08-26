@@ -6,19 +6,21 @@ console.log(`Hello friend!`);
 const projectsList = document.querySelector('.projects__list--js');
 
 
-const findRepositories = () => {
+if (projectsList) {
 
-  fetch(`https://api.github.com/users/sasinskil/repos?sort=created&direction=desc`)
-    .then(resp => resp.json())
-    .then(resp => {
-      const repos = resp;
+  const findRepositories = () => {
 
-      if (repos.length > 0) {
-        for (let repo of repos) {
-          const { name, description, homepage, html_url } = repo;
+    fetch(`https://api.github.com/users/sasinskil/repos?sort=created&direction=desc`)
+      .then(resp => resp.json())
+      .then(resp => {
+        const repos = resp;
 
-          if (homepage) {
-            projectsList.innerHTML += `
+        if (repos.length > 0) {
+          for (let repo of repos) {
+            const { name, description, homepage, html_url } = repo;
+
+            if (homepage) {
+              projectsList.innerHTML += `
             <li class="projects__item">
               <div class="projects__content">
                <img class="projects__github-logo" src="assets/img/github-icon.png" alt="">
@@ -31,12 +33,12 @@ const findRepositories = () => {
             </footer>
           </li>
             `
+            }
           }
         }
-      }
-    })
-    .catch(err => alert(`Something went wrong, ${err}`));
+      })
+      .catch(err => alert(`Something went wrong, ${err}`));
+  }
+  
+  findRepositories();
 }
-
-
-findRepositories();
