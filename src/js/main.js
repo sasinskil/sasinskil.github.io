@@ -27,10 +27,10 @@ if (projectsList) {
                <h4 class="projects__sub-title">${name}</h4>
                <p class="projects__description">${description}</p>
               </div>
-            <footer class="projects__footer">
+            <div class="projects__footer">
               <a class="projects__link projects__link--demo" href="${homepage}">Demo</a>
               <a class="projects__link projects__link--github" href="${html_url}">Github</a>
-            </footer>
+            </div>
           </li>
             `
             }
@@ -39,6 +39,6 @@ if (projectsList) {
       })
       .catch(err => alert(`Something went wrong, ${err}`));
   }
-  
+
   findRepositories();
 }
