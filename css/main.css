@@ -450,42 +450,20 @@ body {
       font-weight: 300;
       font-size: 1.125rem;
       position: relative; }
+      .skills .skills-group__item::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 16px;
+        height: 16px; }
       .skills .skills-group__item--knowledge::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/knowledge-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center; }
+        background: url("../assets/img/check-green.svg"); }
       .skills .skills-group__item--something::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/something-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center; }
+        background: url("../assets/img/check-violet.svg"); }
       .skills .skills-group__item--learn::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/learn-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center; }
+        background: url("../assets/img/check-blue.svg"); }
 
 .projects {
   width: 100%;
@@ -562,6 +540,14 @@ body {
     color: #0593fb;
     position: relative;
     font-size: 1.125rem; }
+    .projects__link::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.8rem;
+      width: 1.25rem;
+      height: 1.25rem; }
     .projects__link:hover::after {
       opacity: 1; }
     .projects__link::after {
@@ -586,25 +572,11 @@ body {
       padding-right: 1.5rem;
       position: relative; }
       .projects__link--demo::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -1.8rem;
-        width: 1.25rem;
-        height: 1.25rem;
         background: url("../assets/img/computer-icon.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center; }
     .projects__link--github::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: -1.8rem;
-      width: 1.25rem;
-      height: 1.25rem;
       background: url("../assets/img/terminal-icon.png");
       background-repeat: no-repeat;
       background-size: contain;
