@@ -23,7 +23,7 @@ if (projectsList) {
               projectsList.innerHTML += `
             <li class="projects__item">
               <div class="projects__content">
-               <img class="projects__github-logo" src="assets/img/github-icon.png" alt="Github logo">
+               <img class="projects__github-logo" src="assets/img/github-icon.svg" alt="Github logo">
                <h4 class="projects__sub-title">${name}</h4>
                <p class="projects__description">${description}</p>
               </div>

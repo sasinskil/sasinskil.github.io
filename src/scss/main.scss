@@ -178,46 +178,26 @@ body {
       font-size: 1.125rem;
       position: relative;
 
-      &--knowledge::before {
+      &::before {
         content: "";
         display: inline-block;
         position: absolute;
         top: 0;
         left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/knowledge-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+        width: 16px;
+        height: 16px;
+      }
+
+      &--knowledge::before {
+        background: url("../assets/img/check-green.svg");
       }
 
       &--something::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/something-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+        background: url("../assets/img/check-violet.svg");
       }
 
       &--learn::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -2rem;
-        width: 18px;
-        height: 18px;
-        background: url("../assets/img/learn-circle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+        background: url("../assets/img/check-blue.svg");
       }
     }
   }
@@ -302,6 +282,16 @@ body {
     position: relative;
     font-size: 1.125rem;
 
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.8rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
     &:hover::after {
       opacity: 1;
     }
@@ -329,13 +319,6 @@ body {
       position: relative;
 
       &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -1.8rem;
-        width: 1.25rem;
-        height: 1.25rem;
         background: url("../assets/img/computer-icon.png");
         background-repeat: no-repeat;
         background-size: contain;
@@ -344,13 +327,6 @@ body {
     }
 
     &--github::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: -1.8rem;
-      width: 1.25rem;
-      height: 1.25rem;
       background: url("../assets/img/terminal-icon.png");
       background-repeat: no-repeat;
       background-size: contain;
@@ -465,7 +441,6 @@ body {
   }
 
   .projects {
-
     &__title {
       text-align: center;
     }
