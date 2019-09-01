@@ -1,0 +1,104 @@
+.skills {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 10rem auto;
+    padding: 0 1rem 0 2rem;
+  
+    &__title {
+      font-size: 2.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $lightGrey;
+    }
+  
+    .skills-group {
+      margin-top: 10rem;
+      display: flex;
+  
+      &:hover > .skills-group__title::before {
+        width: 5rem;
+      }
+  
+      &:hover > .skills-group__title--knowledge {
+        color: $lightGreen;
+      }
+  
+      &:hover > .skills-group__title--something {
+        color: $lightViolet;
+      }
+  
+      &:hover > .skills-group__title--learn {
+        color: $JustBlue;
+      }
+  
+      &__title {
+        font-size: 2rem;
+        margin: 0;
+        width: 100%;
+        position: relative;
+        transition: color 0.5s ease-in-out;
+  
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -1.3rem;
+          left: 0;
+          width: 3rem;
+          height: 0.2rem;
+          border-radius: 0.5rem;
+          transition: width 0.5s ease-in-out;
+        }
+  
+        &--knowledge::before {
+          background-color: $lightGreen;
+        }
+  
+        &--something::before {
+          background-color: $lightViolet;
+        }
+  
+        &--learn::before {
+          background-color: $JustBlue;
+        }
+      }
+  
+      &__list {
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-column-gap: 3rem;
+        grid-row-gap: 1.5rem;
+      }
+  
+      &__item {
+        margin-top: 0.5rem;
+        font-weight: 300;
+        font-size: 1.125rem;
+        position: relative;
+  
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: -2rem;
+          width: 16px;
+          height: 16px;
+        }
+  
+        &--knowledge::before {
+          background: url("../assets/img/check-green.svg");
+        }
+  
+        &--something::before {
+          background: url("../assets/img/check-violet.svg");
+        }
+  
+        &--learn::before {
+          background: url("../assets/img/check-blue.svg");
+        }
+      }
+    }
+  }
