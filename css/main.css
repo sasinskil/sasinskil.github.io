@@ -492,14 +492,17 @@ template {
         position: absolute;
         top: 0;
         left: -2rem;
-        width: 16px;
-        height: 16px; }
+        width: 1rem;
+        height: 1rem; }
       .skills .skills-group__item--knowledge::before {
-        background: url("../assets/img/check-green.svg"); }
+        background: url("../assets/img/check-green.svg");
+        background-size: contain; }
       .skills .skills-group__item--something::before {
-        background: url("../assets/img/check-violet.svg"); }
+        background: url("../assets/img/check-violet.svg");
+        background-size: contain; }
       .skills .skills-group__item--learn::before {
-        background: url("../assets/img/check-blue.svg"); }
+        background: url("../assets/img/check-blue.svg");
+        background-size: contain; }
 
 .projects {
   width: 100%;
