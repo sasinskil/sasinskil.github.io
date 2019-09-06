@@ -84,20 +84,23 @@
           position: absolute;
           top: 0;
           left: -2rem;
-          width: 16px;
-          height: 16px;
+          width: 1rem;
+          height: 1rem;
         }
   
         &--knowledge::before {
           background: url("../assets/img/check-green.svg");
+          background-size: contain;
         }
   
         &--something::before {
           background: url("../assets/img/check-violet.svg");
+          background-size: contain;
         }
   
         &--learn::before {
           background: url("../assets/img/check-blue.svg");
+          background-size: contain;
         }
       }
     }
