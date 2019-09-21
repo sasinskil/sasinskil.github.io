@@ -10,18 +10,19 @@ const moreButton = document.querySelector('.projects__more--js');
 if (projectsList) {
 
   moreButton.classList.add('projects__more--hide');
-  fetch(`https://api.github.com/users/sasinskil/repos?sort=created&direction=desc`)
+  fetch(`https://api.github.com/users/sasinskil/repos?sort=updated&direction=desc`)
     .then(resp => resp.json())
     .then(resp => {
       moreButton.classList.remove('projects__more--hide');
       const repos = resp;
 
       if (repos.length > 0) {
-        for (let repo of repos.slice(0, 5)) {
+        for (let repo of repos.slice(0, 4)) {
           const { name, description, homepage, html_url } = repo;
 
-          if (homepage) {
-            projectsList.innerHTML += `
+          if (projectsList) {
+            projectsList.innerHTML +=
+            `
             <li class="projects__item">
               <div class="projects__content">
                <img class="projects__github-logo" src="assets/img/github-icon.svg" alt="Github logo">
@@ -29,32 +30,31 @@ if (projectsList) {
                <p class="projects__description">${description}</p>
               </div>
             <div class="projects__footer">
-              <a class="projects__link projects__link--demo" href="${homepage}" target="_blank" rel="nofollow noreferrer">Demo</a>
+              ${homepage ? `<a class="projects__link projects__link--demo" href="${homepage}" target="_blank" rel="nofollow noreferrer">Demo</a>` : ''}
               <a class="projects__link projects__link--github" href="${html_url}" target="_blank" rel="nofollow noreferrer">Github</a>
             </div>
-          </li>
-            `
+          </li>`
           }
         }
 
         moreButton.addEventListener('click', () => {
-          for (let repo of repos.slice(5)) {
+          for (let repo of repos.slice(4)) {
             const { name, description, homepage, html_url } = repo;
 
             if (homepage) {
-              projectsList.innerHTML += `
-            <li class="projects__item projects__item--more">
-              <div class="projects__content">
-               <img class="projects__github-logo" src="assets/img/github-icon.svg" alt="Github logo">
-               <h4 class="projects__sub-title">${name}</h4>
-               <p class="projects__description">${description}</p>
+              projectsList.innerHTML += 
+              `
+              <li class="projects__item">
+                <div class="projects__content">
+                 <img class="projects__github-logo" src="assets/img/github-icon.svg" alt="Github logo">
+                 <h4 class="projects__sub-title">${name}</h4>
+                 <p class="projects__description">${description}</p>
+                </div>
+              <div class="projects__footer">
+                ${homepage ? `<a class="projects__link projects__link--demo" href="${homepage}" target="_blank" rel="nofollow noreferrer">Demo</a>` : ''}
+                <a class="projects__link projects__link--github" href="${html_url}" target="_blank" rel="nofollow noreferrer">Github</a>
               </div>
-            <div class="projects__footer">
-              <a class="projects__link projects__link--demo" href="${homepage}" target="_blank" rel="nofollow noreferrer">Demo</a>
-              <a class="projects__link projects__link--github" href="${html_url}" target="_blank" rel="nofollow noreferrer">Github</a>
-            </div>
-          </li>
-            `
+            </li>`
             }
           }
 
