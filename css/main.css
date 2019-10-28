@@ -651,6 +651,7 @@ template {
   .projects__more {
     display: block;
     border: none;
+    cursor: pointer;
     background-color: #0593fb;
     border-radius: 0.3rem;
     color: #fff;
@@ -713,6 +714,8 @@ template {
     padding: 0.5rem 0 3rem 0; }
   .contact__item + .contact__item {
     margin-left: 1rem; }
+  .contact__image--lnk {
+    margin: .15rem 0 0 .125rem; }
   .contact__email {
     color: #0593fb;
     text-decoration: none;
