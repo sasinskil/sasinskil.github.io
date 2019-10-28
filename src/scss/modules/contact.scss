@@ -49,6 +49,10 @@
     &__item + &__item {
       margin-left: 1rem;
     }
+
+    &__image--lnk {
+      margin: .15rem 0 0 .125rem;
+    }
   
     &__email {
       color: $lightBlue;
