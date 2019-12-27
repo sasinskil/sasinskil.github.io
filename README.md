@@ -1,4 +1,4 @@
-![Screenshot](github/screenshot.png)
+![Screenshot](github/screenshot2.PNG)
 
 # My online CV.
 
