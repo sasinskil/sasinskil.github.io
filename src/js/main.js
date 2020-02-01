@@ -17,10 +17,10 @@ if (projectsList) {
       const repos = resp;
 
       if (repos.length > 0) {
-        for (let repo of repos.slice(0, 4)) {
+        for (let repo of repos.slice(0, 6)) {
           const { name, description, homepage, html_url } = repo;
 
-          if (projectsList) {
+          if (projectsList && homepage) {
             projectsList.innerHTML +=
             `
             <li class="projects__item">
@@ -38,7 +38,7 @@ if (projectsList) {
         }
 
         moreButton.addEventListener('click', () => {
-          for (let repo of repos.slice(4)) {
+          for (let repo of repos.slice(6)) {
             const { name, description, homepage, html_url } = repo;
 
             if (homepage) {

@@ -153,22 +153,22 @@
       border: none;
       cursor: pointer;
       background-color: $lightBlue;
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       color: $white;
       text-align: center;
       font-size: 1.1rem;
       padding: 0.8rem 3.1rem;
-      box-shadow:0px 6px 12px rgba(24, 41, 67, 0.2);
+      box-shadow:0px 6px 12px rgba(24, 41, 67, 0.3);
       letter-spacing: 0.05rem;
       margin: 2.5rem auto 0;
-      transition: transform 0.2s ease-in-out, background-color 0.4s ease-in-out;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
       &--hide {
         display: none;
       }
 
       &:hover {
-        transform: translatey(0.1rem);
+        transform: translatey(-0.1rem);
         background-color: $violet;
       }
     }
