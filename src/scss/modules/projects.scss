@@ -9,167 +9,165 @@
 }
 
 .projects {
+  width: 100%;
+  background: $lightGrey;
+
+  &__box {
     width: 100%;
-    background: $lightGrey;
-  
-    &__box {
-      width: 100%;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 4rem 2rem 5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-  
-    &__title {
-      font-size: 2.25rem;
-    }
-  
-    &__paragraph {
-      width: 100%;
-      max-width: 550px;
-      font-size: 1.25rem;
-      text-align: left;
-      line-height: 2rem;
-      margin-bottom: 5rem;
-    }
-  
-    &__list {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 1rem;
-      grid-row-gap: 1rem;
-    }
-  
-    &__item {
-      background: $white;
-      box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
-      border-radius: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-      &--more {
-        animation: showMe 0.4s ease-in-out;
+  &__title {
+    font-size: 2.25rem;
+  }
 
-      }
-    }
-  
-    &__content {
-      padding: 2rem 2rem 0 2rem;
-    }
-  
-    &__sub-title {
-      font-size: 1.25rem;
-    }
-  
-    &__description {
-      width: 100%;
-      max-width: 550px;
-      text-align: left;
-      line-height: 1.5rem;
-      margin-bottom: 3rem;
-      font-size: 1.125rem;
-      font-weight: 200;
-    }
-  
-    &__footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background: $lightGrey;
-      padding: 1rem 2rem;
-      border-bottom-left-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
-    }
-  
-    &__link {
-      text-decoration: none;
-      margin-left: 3rem;
-      color: $lightBlue;
-      position: relative;
-      font-size: 1.125rem;
-  
-      &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: -1.8rem;
-        width: 1.25rem;
-        height: 1.25rem;
-      }
-  
-      &:hover::after {
-        opacity: 1;
-      }
-  
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: -0.6rem;
-        left: -2rem;
-        height: 2.5rem;
-        width: 6.5rem;
-        opacity: 0;
-        background: $lightGrey;
-        background-image: url("../assets/img/moving_forward-arrow.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-        transition: opacity 0.6s ease-in-out;
-      }
-  
-      &--demo {
-        border-right: 1px solid $borderRightGrey;
-        padding-right: 1.5rem;
-        position: relative;
-  
-        &::before {
-          background: url("../assets/img/computer-icon.png");
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center center;
-        }
-      }
-  
-      &--github::before {
-        background: url("../assets/img/terminal-icon.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-      }
-    }
+  &__paragraph {
+    width: 100%;
+    max-width: 550px;
+    font-size: 1.25rem;
+    text-align: left;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+  }
 
-    &__more {
-      display: block;
-      border: none;
-      cursor: pointer;
-      background-color: $lightBlue;
-      border-radius: 0.2rem;
-      color: $white;
-      text-align: center;
-      font-size: 1.1rem;
-      padding: 0.8rem 3.1rem;
-      box-shadow:0px 6px 12px rgba(24, 41, 67, 0.3);
-      letter-spacing: 0.05rem;
-      margin: 2.5rem auto 0;
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
 
-      &--hide {
-        display: none;
-      }
+  &__item {
+    background: $white;
+    box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-      &:hover {
-        transform: translatey(-0.1rem);
-        background-color: $violet;
-      }
+    &--more {
+      animation: showMe 0.4s ease-in-out;
     }
   }
+
+  &__content {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  &__sub-title {
+    font-size: 1.25rem;
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 550px;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 1.125rem;
+    font-weight: 200;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: $lightGrey;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin-left: 3rem;
+    color: $lightBlue;
+    position: relative;
+    font-size: 1.125rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -1.8rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -0.6rem;
+      left: -2rem;
+      height: 2.5rem;
+      width: 6.5rem;
+      opacity: 0;
+      background: $lightGrey;
+      background-image: url("../assets/img/moving_forward-arrow.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    &--demo {
+      border-right: 1px solid $borderRightGrey;
+      padding-right: 1.5rem;
+      position: relative;
+
+      &::before {
+        background: url("../assets/img/computer-icon.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+
+    &--github::before {
+      background: url("../assets/img/terminal-icon.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+
+  &__more {
+    display: block;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: $lightBlue;
+    border-radius: 0.1rem;
+    color: $white;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.8rem 3.1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+    margin: 2.5rem auto 0;
+    transition: background-color 0.3s ease-in-out;
+
+    &--hide {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $violet;
+    }
+  }
+}
