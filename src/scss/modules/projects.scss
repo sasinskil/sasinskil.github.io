@@ -43,12 +43,12 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+    grid-gap: 2rem;
   }
 
   &__item {
     background: $white;
+    position: relative;
     box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
     border-radius: 0.5rem;
     display: flex;
@@ -64,8 +64,25 @@
     padding: 2rem 2rem 0 2rem;
   }
 
+  &__github-logo {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    border-radius: 50%;
+    width: 85px;
+    @media screen and(max-width: 768px) {
+      width: 70px;
+    }
+  }
+
   &__sub-title {
     font-size: 1.25rem;
+    margin-top: 5rem;
+    @media screen and(max-width: 768px) {
+      margin-top: 4rem;
+    }
   }
 
   &__description {
