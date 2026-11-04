@@ -72,7 +72,7 @@
     background: $white;
     border-radius: 50%;
     width: 85px;
-    @media screen and(max-width: 768px) {
+    @media screen and (max-width: 768px) {
       width: 70px;
     }
   }
@@ -80,7 +80,7 @@
   &__sub-title {
     font-size: 1.25rem;
     margin-top: 5rem;
-    @media screen and(max-width: 768px) {
+    @media screen and (max-width: 768px) {
       margin-top: 4rem;
     }
   }

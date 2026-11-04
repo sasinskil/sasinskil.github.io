@@ -27,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and(max-width: 900px) {
+@media screen and (max-width: 900px) {
   .skills-group {
     flex-direction: column;
 
@@ -37,13 +37,13 @@ body {
   }
 }
 
-@media screen and(max-width: 800px) {
+@media screen and (max-width: 800px) {
   .projects__list {
     grid-template-columns: 1fr;
   }
 }
 
-@media screen and(max-width: 670px) {
+@media screen and (max-width: 670px) {
   html {
     font-size: 12px;
   }
