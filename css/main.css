@@ -592,58 +592,21 @@ template {
   background-size: contain;
 }
 
-@-webkit-keyframes showMe {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes showMe {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.projects {
+.achievements {
   width: 100%;
   background: #f5f7fa;
 }
-.projects__box {
+.achievements__box {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 4rem 2rem 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
-.projects__title {
+.achievements__title {
   font-size: 2.25rem;
+  margin-bottom: 4rem;
 }
-.projects__paragraph {
-  width: 100%;
-  max-width: 550px;
-  font-size: 1.25rem;
-  text-align: left;
-  line-height: 2rem;
-  margin-bottom: 5rem;
-}
-.projects__list {
+.achievements__list {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -654,154 +617,26 @@ template {
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
-.projects__item {
+.achievements__item {
   background: #fff;
-  position: relative;
   -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
           box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.2);
   border-radius: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 2rem;
+  border-top: 0.2rem solid #0593fb;
 }
-.projects__item--more {
-  -webkit-animation: showMe 0.4s ease-in-out;
-          animation: showMe 0.4s ease-in-out;
-}
-.projects__content {
-  padding: 2rem 2rem 0 2rem;
-}
-.projects__github-logo {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: #fff;
-  border-radius: 50%;
-  width: 85px;
-}
-@media screen and (max-width: 768px) {
-  .projects__github-logo {
-    width: 70px;
-  }
-}
-.projects__sub-title {
+.achievements__sub-title {
   font-size: 1.25rem;
-  margin-top: 5rem;
+  margin: 0 0 1rem;
 }
-@media screen and (max-width: 768px) {
-  .projects__sub-title {
-    margin-top: 4rem;
-  }
-}
-.projects__description {
+.achievements__description {
   width: 100%;
   max-width: 550px;
   text-align: left;
   line-height: 1.5rem;
-  margin-bottom: 3rem;
+  margin: 0;
   font-size: 1.125rem;
   font-weight: 200;
-}
-.projects__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #f5f7fa;
-  padding: 1rem 2rem;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-.projects__link {
-  text-decoration: none;
-  margin-left: 3rem;
-  color: #0593fb;
-  position: relative;
-  font-size: 1.125rem;
-}
-.projects__link::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: -1.8rem;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-.projects__link:hover::after {
-  opacity: 1;
-}
-.projects__link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -0.6rem;
-  left: -2rem;
-  height: 2.5rem;
-  width: 6.5rem;
-  opacity: 0;
-  background: #f5f7fa;
-  background-image: url("../assets/img/moving_forward-arrow.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  -webkit-transition: opacity 0.6s ease-in-out;
-  transition: opacity 0.6s ease-in-out;
-}
-.projects__link--demo {
-  border-right: 1px solid #cbd2d9;
-  padding-right: 1.5rem;
-  position: relative;
-}
-.projects__link--demo::before {
-  background: url("../assets/img/computer-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-}
-.projects__link--github::before {
-  background: url("../assets/img/terminal-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-}
-.projects__more {
-  display: block;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  background-color: #0593fb;
-  border-radius: 0.1rem;
-  color: #fff;
-  text-align: center;
-  font-size: 1.1rem;
-  padding: 0.8rem 3.1rem;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  margin: 2.5rem auto 0;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-.projects__more--hide {
-  display: none;
-}
-.projects__more:hover {
-  background-color: #171f3f;
 }
 
 .contact {
@@ -911,7 +746,7 @@ body {
   }
 }
 @media screen and (max-width: 800px) {
-  .projects__list {
+  .achievements__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -926,14 +761,8 @@ body {
   .skills__title {
     text-align: center;
   }
-  .projects__box {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .projects__paragraph {
+  .achievements__title {
     text-align: center;
-    line-height: 2.4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
