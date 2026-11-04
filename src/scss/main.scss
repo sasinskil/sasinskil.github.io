@@ -3,7 +3,7 @@
 
 @import "modules/hero.scss";
 @import "modules/skills.scss";
-@import "modules/projects.scss";
+@import "modules/achievements.scss";
 @import "modules/contact.scss";
 
 html {
@@ -38,7 +38,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .projects__list {
+  .achievements__list {
     grid-template-columns: 1fr;
   }
 }
@@ -56,14 +56,7 @@ body {
     text-align: center;
   }
 
-  .projects {
-    &__box {
-      align-items: center;
-    }
-
-    &__paragraph {
-      text-align: center;
-      line-height: 2.4rem;
-    }
+  .achievements__title {
+    text-align: center;
   }
 }

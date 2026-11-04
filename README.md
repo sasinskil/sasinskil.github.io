@@ -18,8 +18,6 @@ To ***publish*** with the help of github pages use `npm run deploy`
 
 - HTML/HTML5,
 - SASS,
-- JavaScript/ES6,
-- Rest API -> [Github Api](https://developer.github.com/v3/)
 - Gulp,
 - NPM Scripts,
 - Figma -> [With extension](https://pdkit.co)
